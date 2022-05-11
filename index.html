@@ -41,6 +41,12 @@
       <span class="btn btn-info fa fa-paint-brush" id="drawing-line"
         >Draw Line</span
       > 
+
+      <!-- The drawing line button  -->
+      <span class="btn btn-info fa fa-paint-brush" id="drawing-curve"
+      >Draw Curve</span
+      > 
+
       <!-- jQuery -->
       <script
       src="https://code.jquery.com/jquery-3.5.1.js"
@@ -63,6 +69,13 @@
       src="./javascript/drawing-rectangle.js"
       type="text/javascript"
     ></script>
+      <!-- The drawing curve(QUADRATIC) functionality  -->
+      <script
+      src="./javascript/drawing-curve.js"
+      type="text/javascript"
+    ></script>
+
+
     <script type="text/javascript">
     $(()=>{
       currentFunction =  new DrawingLine(contextReal)
@@ -71,7 +84,10 @@
       });
       $("#drawing-line").click(() => {
         currentFunction = new DrawingLine(contextReal);
-      });  
+      }); 
+      $("#drawing-curve").click(() => {
+        currentFunction = new DrawingCurve(contextReal);
+      }); 
     })
     </script>
   </body>

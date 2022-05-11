@@ -52,6 +52,11 @@
       >Draw straight line</span
       > 
 
+      <!-- The eraser button  -->
+      <span class="btn btn-info fa fa-paint-brush" id="eraser"
+      >Eraser</span
+      > 
+
       <!-- jQuery -->
       <script
       src="https://code.jquery.com/jquery-3.5.1.js"
@@ -86,6 +91,12 @@
       type="text/javascript"
     ></script>
 
+      <!-- The drawing straight line functionality  -->
+      <script
+      src="./javascript/eraser.js"
+      type="text/javascript"
+    ></script>    
+
 
     <script type="text/javascript">
     $(()=>{
@@ -102,6 +113,10 @@
       $("#drawing-straight").click(() => {
         currentFunction = new DrawingStraight(contextReal, contextDraft);
       }); 
+      $("#eraser").click(() => {
+        currentFunction = new Eraser(contextReal);
+      }); 
+
     })
     </script>
   </body>

@@ -24,14 +24,20 @@
       <div id = "shape-buttons">
         <button type = 'button' class = 'btn' id = 'bt'><i class='fa fa-square fa-2x' id = 'drawing-rectangle'></i></button> 
         <button type = 'button' class = 'btn' id = 'bt'><i class= 'fa fa-paint-brush fa-2x' id = 'drawing-line'></i></button>
-          <button type = 'button' class = 'btn' id = 'bt'><i class= 'fa fa-circle fa-2x' id = 'drawing-circle'></i></button>
+        <button type = 'button' class = 'btn' id = 'bt'><i class= 'fa fa-circle fa-2x' id = 'drawing-circle'></i></button>
         <button type = 'button' class = 'btn' id = 'bt'><i class= 'fa fa-minus fa-2x' id = 'drawing-straight'></i></button>
         <button type = 'button' class = 'btn' id = 'bt'><i class= 'fas fa-font fa-2x' id = 'text'></i></button> 
         <button type = 'button' class = 'btn' id = 'bt'><i class= 'fas fa-bezier-curve fa-2x' id = 'drawing-curve'></i></button>  
-        <button type = 'button' class = 'btn' id = 'bt'><i class="fas fa-draw-polygon fa-2x" id = 'drawing-polygon'></i></button>
+        <!-- <button type = 'button' class = 'btn' id = 'bt'><i class="fas fa-draw-polygon fa-2x" id = 'drawing-polygon'></i></button>
         <button type = 'button' class = 'btn' id = 'bt'><i class="far fa-grin-tears fa-2x"  id = 'drawing-emoji'></i></button>
-        <button type = 'button' class = 'btn' id = 'bt'><i class= 'fas fa-filter fa-2x' id = 'filter-button' ></i></button> 
+        <button type = 'button' class = 'btn' id = 'bt'><i class= 'fas fa-filter fa-2x' id = 'filter-button' ></i></button>  -->
     </div>
+    </div>
+    <div class="colorSection">
+      <input onInput="draw_color = this.value" type="color" class="color-picker">
+    </div>
+    <div class="textsize">
+      <input type="range" min="1" max="100" class="pen-range" onInput="draw_width = this.value">    
     </div>
 
         <div id="adminFunctions">
@@ -39,12 +45,9 @@
             <button onClick="undo_last()" type = 'button' class = 'btn ' id = 'bt'><i class='fa fa-undo fa-2x' id = 'undo-button'></i></button>
             <button type = 'button' class = 'btn ' id = 'bt'><i class= 'fa fa-redo fa-2x' id = 'redo-button'></i></button>
             <button type = 'button' class = 'btn ' id = 'bt'><i class="far fa-object-ungroup fa-2x" id = 'selector-button'></i></button>
-            <button type = 'button' class = 'btn ' id = 'bt'><i class="fas fa-search-plus fa-2x" id = 'zoom-in'></i></button>
+            <button type = 'button' class = 'btn ' id = "btnDownload"><i class="fa-solid fa-download fa-2x" id = 'download'></i></button>
             <button type = 'button' class = 'btn ' id = 'bt'><i class= 'fas fa-search-minus fa-2x' id = 'zoom-out'></i></button>               
-            <button onClick="clear_canvas()" type = 'button' class = 'btn ' id = 'bt'><i class= 'far fa-trash-alt fa-2x' id = 'clear-button'></i></button>  
-            <input onInput="draw_color = this.value" type="color" class="color-picker">
-            <input type="range" min="1" max="100" class="pen-range" onInput="draw_width = this.value">
-            <button type="button" id="btnDownload">Download</button>                  
+            <button onClick="clear_canvas()" type = 'button' class = 'btn ' id = 'bt'><i class= 'far fa-trash-alt fa-2x' id = 'clear-button'></i></button>                  
           </div>
           </div>
     </div>

@@ -12,6 +12,10 @@ class DrawingStraight extends PaintFunction{
         this.ctx.strokeStyle = '#f44'
         this.ctxDraft.strokeStyle = '#f44'
 
+        // Kind of line
+        this.ctx.lineJoin = "round";
+        this.ctx.lineCap = "round"
+
         this.ctx.lineWidth = 5;
         this.ctxDraft.lineWidth = 5;
 

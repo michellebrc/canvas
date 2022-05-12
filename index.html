@@ -8,6 +8,8 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css/style.css" />
+     <!-- font awesome -->
+     <script src="https://kit.fontawesome.com/d9154953a4.js" crossorigin="anonymous"></script>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -16,46 +18,38 @@
     />
    
   </head>
-  <body class="container">
-    <h1>Canvas Application</h1>
-    <div id="canvas-container">
-      <canvas
-        id="canvas-real"
-        class="canvas"
-        width="1280px"
-        height="720px"
-      ></canvas>
-      <canvas
-        id="canvas-draft"
-        class="canvas"
-        width="1280px"
-        height="720px"
-      ></canvas>
+  <body>
+    <div id="menu">
+      <div id="main-tools">
+      <div id = "shape-buttons">
+        <button type = 'button' class = 'btn' id = 'bt'><i class='fa fa-square fa-2x' id = 'drawing-rectangle'></i></button> 
+        <button type = 'button' class = 'btn' id = 'bt'><i class= 'fa fa-paint-brush fa-2x' id = 'draw-line'></i></button>
+        <button type = 'button' class = 'btn' id = 'bt'><i class= 'fa fa-circle fa-2x' id = 'draw-circle'></i></button>
+        <button type = 'button' class = 'btn' id = 'bt'><i class= 'fa fa-minus fa-2x' id = 'drawing-straight'></i></button>
+        <button type = 'button' class = 'btn' id = 'bt'><i class= 'fas fa-font fa-2x' id = 'text-button'></i></button> 
+        <button type = 'button' class = 'btn' id = 'bt'><i class= 'fas fa-bezier-curve fa-2x' id = 'drawing-curve'></i></button>  
+        <button type = 'button' class = 'btn' id = 'bt'><i class="fas fa-draw-polygon fa-2x" id = 'draw-polygon'></i></button>
+        <button type = 'button' class = 'btn' id = 'bt'><i class="far fa-grin-tears fa-2x"  id = 'draw-emoji'></i></button>
+        <button type = 'button' class = 'btn' id = 'bt'><i class= 'fas fa-filter fa-2x' id = 'filter-button' ></i></button> 
     </div>
-    <div class="buttons">
-      <!-- The drawing rectangle button  -->
-      <span class="btn btn-primary fa fa-square" id="drawing-rectangle"
-        >Draw Rectangle</span
-      >
-      <!-- The drawing line button  -->
-      <span class="btn btn-info fa fa-paint-brush" id="drawing-line"
-        >Draw Line</span
-      > 
+    </div>
 
-      <!-- The drawing line button  -->
-      <span class="btn btn-info fa fa-paint-brush" id="drawing-curve"
-      >Draw Curve</span
-      > 
+        <div id="adminFunctions">
+          <div id = functional-buttons>
+            <button type = 'button' class = 'btn ' id = 'bt'><i class='fa fa-undo fa-2x' id = 'undo-button'></i></button>
+            <button type = 'button' class = 'btn ' id = 'bt'><i class= 'fa fa-redo fa-2x' id = 'redo-button'></i></button>
+            <button type = 'button' class = 'btn ' id = 'bt'><i class="far fa-object-ungroup fa-2x" id = 'selector-button'></i></button>
+            <button type = 'button' class = 'btn ' id = 'bt'><i class="fas fa-search-plus fa-2x" id = 'zoom-in'></i></button>
+            <button type = 'button' class = 'btn ' id = 'bt'><i class= 'fas fa-search-minus fa-2x' id = 'zoom-out'></i></button>               
+            <button type = 'button' class = 'btn ' id = 'bt'><i class= 'far fa-trash-alt fa-2x' id = 'clear-button'></i></button>                    
+          </div>
+          </div>
+    </div>
 
-      <!-- The drawing straight button  -->
-      <span class="btn btn-info fa fa-paint-brush" id="drawing-straight"
-      >Draw straight line</span
-      > 
-
-      <!-- The eraser button  -->
-      <span class="btn btn-info fa fa-paint-brush" id="eraser"
-      >Eraser</span
-      > 
+    <div id="canvas-container">
+      <canvas id="canvas-real" class="canvas" width="2000px" height="2000px"></canvas>
+      <canvas id="canvas-draft" class="canvas" width="2000px" height="2000px"></canvas>
+    </div>
 
       <!-- jQuery -->
       <script

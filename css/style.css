@@ -16,3 +16,102 @@ body {
 #canvas-container {
   height: 720px;
 }
+
+/* body settings */
+/*-------------------Global styles-------------------*/
+html, body {
+	height: 100%;
+	margin:0;
+}
+body {
+	background: rgb(152,152,152);
+	overflow: hidden;
+}
+div {
+	box-sizing: border-box;
+}
+p {
+	margin: 0;
+	color: rgb(255,255,255);
+	/* font-family: 'Metrophobic', sans-serif; */
+}
+
+
+/* menu style */
+body {
+  overflow: hidden;
+}
+
+#menu {
+	position: fixed;
+	width: 180px;
+	height: 100%;
+	border-right: 1px solid black;
+  background: black;
+	/* background: linear-gradient(to right, rgb(35,35,35), rgb(50,50,50));
+	background: -webkit-linear-gradient(to right, rgb(35,35,35), rgb(50,50,50));
+	background: -moz-linear-gradient(to right, rgb(35,35,35), rgb(50,50,50)); */
+  z-index: 10;
+}
+
+
+/* tools */
+#main-tools{
+  width: 100%;
+	display: flex;
+	flex-wrap:wrap;
+}
+#functional-buttons{
+  width: 100%;
+	display: flex;
+	flex-wrap:wrap;
+  margin-top: 30px;
+}
+
+#shape-buttons{
+  width: 100%;
+	padding-top: 10px;
+	display: flex;
+	flex-wrap:wrap;
+}
+
+#fuctional-button{
+	display: flex;
+
+}
+
+#bt{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+  height: 55px;
+	width: 55px;
+}
+
+.btn{
+  background: rgb(115, 112, 112) !important;
+	margin: 2px;
+	padding: 5px;
+	border-radius: 20%;
+	height: 50px;
+	width: 50px;
+}
+#bt:hover{
+  background: white !important;
+	transition: all 0.2s;
+ }
+
+ .btn :active {
+	background: white ;
+ }
+
+
+ /*-------------------Canvas styles-------------------*/
+canvas {
+	position: absolute;
+}
+#canvasContainer {
+	min-height: 100%;
+	min-width: 100%;
+	overflow: hidden;
+}

@@ -84,7 +84,15 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-  height: 55px;
+    height: 55px;
+	width: 55px;
+}
+
+#btnDownload{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    height: 55px;
 	width: 55px;
 }
 
@@ -115,3 +123,20 @@ canvas {
 	min-width: 100%;
 	overflow: hidden;
 }
+
+/* ColorSection */
+.colorSection{
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+}
+
+/* textsize */
+
+.textsize{
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+}
+
+

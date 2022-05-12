@@ -9,8 +9,8 @@ class DrawingCurve extends PaintFunction{
 
     onMouseDown(coord, e){
         
-        this.ctx.strokeStyle = '#f44'
-        this.ctxDraft.strokeStyle = '#f44'
+        this.ctx.strokeStyle = draw_color
+        this.ctxDraft.strokeStyle = draw_color
 
         this.ctx.lineWidth = 5;
         this.ctxDraft.lineWidth = 5;

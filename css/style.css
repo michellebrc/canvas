@@ -113,6 +113,10 @@ body {
 	background: white ;
  }
 
+ .btn-group>.btn:first-child {
+	margin-left: 2px !important;
+  }
+
 
  /*-------------------Canvas styles-------------------*/
 canvas {

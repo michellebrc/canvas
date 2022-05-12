@@ -21,7 +21,7 @@ class DrawingLine extends PaintFunction {
     this.context.lineJoin = "round";
     this.context.lineCap = "round"
     // Width of line
-    this.context.lineWidth = 5;
+    this.context.lineWidth = draw_width;
     // Drawing the line here
     this.context.beginPath();
     this.context.moveTo(coord[0], coord[1]);

@@ -12,8 +12,8 @@ class DrawingCurve extends PaintFunction{
         this.ctx.strokeStyle = draw_color
         this.ctxDraft.strokeStyle = draw_color
 
-        this.ctx.lineWidth = 5;
-        this.ctxDraft.lineWidth = 5;
+        this.ctx.lineWidth = draw_width;
+        this.ctxDraft.lineWidth = draw_width;
 
         if(this.click === 0){
             this.origX = coord[0]

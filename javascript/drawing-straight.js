@@ -16,8 +16,8 @@ class DrawingStraight extends PaintFunction{
         this.ctx.lineJoin = "round";
         this.ctx.lineCap = "round"
 
-        this.ctx.lineWidth = 5;
-        this.ctxDraft.lineWidth = 5;
+        this.ctx.lineWidth = draw_width;
+        this.ctxDraft.lineWidth = draw_width;
 
         if(this.click === 0){
             this.origX = coord[0]

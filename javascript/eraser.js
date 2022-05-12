@@ -11,7 +11,7 @@ class Eraser extends PaintFunction{
     // Kind of line
     this.ctx.lineJoin = "round";
     // Width of line
-    this.ctx.lineWidth = 20;
+    this.ctx.lineWidth = draw_width;
     // Drawing the line here
     this.ctx.beginPath();
     this.ctx.moveTo(coord[0], coord[1]);

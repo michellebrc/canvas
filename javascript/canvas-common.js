@@ -12,6 +12,14 @@ let contextDraft = canvasDraft.getContext("2d");
 let currentFunction;
 let dragging = false;
 
+let draw_color = "black";
+let draw_width = "2";
+let is_drawing = false;
+
+function change_color(element) {
+    draw_color = element.style.background;
+}
+
 $("#canvas-draft").mousedown(function (e) {
   let mouseX = e.offsetX;
   let mouseY = e.offsetY;
@@ -59,3 +67,18 @@ class PaintFunction {
   onMouseLeave() {}
   onMouseEnter() {}
 }
+
+let canvasSettings = {
+  colorBackground: "#FFFFFF",
+  colorStroke: "#000000",
+  colorFill: "#000000",
+  colorFillArray: [],
+  colorHex: [],
+  colorHex1: "",
+  strokeSize: 10,
+  polygonSides: 3,
+  textFont: "Arial",
+  textSize: "18",
+  fontWeight: "normal",
+  fontStyle: "normal"
+};

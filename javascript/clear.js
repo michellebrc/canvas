@@ -1,10 +1,7 @@
 // Clear Code
 
-function clear_canvas() {
-    context.fillstyle = start_background_color;
-    context.clearRect(0, 0, canvasDraft.width, canvasDraft.height);
-    context.fillRect(0, 0, canvasDraft.width, canvasDraft.height);
-
-    restore_array =[];
-    index = -1;
+function clear() {
+    contextReal.fillStyle = canvasSettings.colorBackground
+    contextReal.fillRect(0, 0, canvasReal.width, canvasReal.height)
+    restoreArray.push(contextReal.getImageData(0, 0, canvasReal.width, canvasReal.height));
 }

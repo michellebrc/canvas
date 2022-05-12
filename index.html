@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="css/style.css" />
      <!-- font awesome -->
      <script src="https://kit.fontawesome.com/d9154953a4.js" crossorigin="anonymous"></script>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
-      crossorigin="anonymous"
-    />
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+     integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css" />
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+     integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
    
   </head>
   <body>
@@ -42,12 +43,33 @@
 
         <div id="adminFunctions">
           <div id = functional-buttons>
+            <!--filter drop down button-->
+            <span class="btn-group">
+              <button type = 'button' class = 'btn ' id = 'bt' data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false" title="Filter">
+                <i class="fas fa-fw fa-filter fa-2x"></i>
+                <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li><a href="#" id="brightnessFilter">Brightness</a></li>
+                <li><a href="#" id="contrastFilter">Contrast</a></li>
+                <li><a href="#" id="blurFilter">Blur</a></li>
+                <li><a href="#" id="dropShadowFilter">Drop Shadow</a></li>
+                <li><a href="#" id="grayscaleFilter">Grayscale</a></li>
+                <li><a href="#" id="hueFilter">Hue Rotate</a></li>
+                <li><a href="#" id="opacityFilter">Opacity</a></li>
+                <li><a href="#" id="invertFilter">Invert</a></li>
+                <li><a href="#" id="satuateFilter">Satuation</a></li>
+                <li><a href="#" id="sepiaFilter">Sepia</a></li>
+                <li><a href="#" id="clearFilter">Clear Filter</a></li>
+              </ul>
+            </span>
             <button onClick="undo_last()" type = 'button' class = 'btn ' id = 'bt'><i class='fa fa-undo fa-2x' id = 'undo-button'></i></button>
             <button type = 'button' class = 'btn ' id = 'bt'><i class= 'fa fa-redo fa-2x' id = 'redo-button'></i></button>
+            <button type = 'button' class = 'btn ' id = 'bt'><i class= 'fa fa-eraser fa-2x' id = 'eraser'></i></button>
             <button type = 'button' class = 'btn ' id = 'bt'><i class="far fa-object-ungroup fa-2x" id = 'selector-button'></i></button>
-            <button type = 'button' class = 'btn ' id = "btnDownload"><i class="fa-solid fa-download fa-2x" id = 'download'></i></button>
-            <button type = 'button' class = 'btn ' id = 'bt'><i class= 'fas fa-search-minus fa-2x' id = 'zoom-out'></i></button>               
-            <button onClick="clear_canvas()" type = 'button' class = 'btn ' id = 'bt'><i class= 'far fa-trash-alt fa-2x' id = 'clear-button'></i></button>                  
+            <button type = 'button' class = 'btn ' id = "btnDownload"><i class="fa-solid fa-download fa-2x" id = 'download'></i></button>              
+            <button type = 'button' class = 'btn ' id = 'bt'><i class= 'far fa-trash-alt fa-2x' id = 'clear-button'></i></button>                  
           </div>
           </div>
     </div>
@@ -58,10 +80,23 @@
     </div>
  
       <!-- jQuery -->
-      <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jscolor/2.4.5/jscolor.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.4.0/fabric.min.js"></script>
     ></script>
     <!-- The drawing functionality  -->
     <script
@@ -96,7 +131,7 @@
       type="text/javascript"
     ></script>
 
-      <!-- The drawing straight line functionality  -->
+      <!-- The eraser functionality  -->
       <script
       src="./javascript/eraser.js"
       type="text/javascript"
@@ -114,17 +149,13 @@
       type="text/javascript"
     ></script>
 
-      <!--The undo work functionality-->
-    <script
-      src="./javascript/undo.js"
-      type="text/javascript"
-    ></script>
-
-    <!--The undo work functionality-->
+    <!--The insert text functionality-->
     <script
     src="./javascript/insert-text.js"
     type="text/javascript"
   ></script>
+<!--The filter functionality-->
+  <script src="./javascript/filter.js"></script>
 
 
 
@@ -153,8 +184,8 @@
         currentFunction = new Text(contextReal, contextDraft);
       }); 
 
-      $("#undo-button").click(() => {
-        currentFunction = undo_last();
+      $("#clear-button").click(() => {
+        currentFunction = clear();
       }); 
 
     })
